@@ -1,0 +1,368 @@
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+html,body,.wrapper{
+  height:100%;
+}
+
+body{
+  max-width:100%;
+  margin:auto;
+  font-size:14px;
+  font-family: 'Muli', sans-serif;
+}
+
+header{
+  height:100%;
+  position:relative;
+  overflow:hidden;
+  background-image:url("../images/header-image.jpg");
+  background-position: center;
+  background-size:cover;
+  width:100%;
+}
+
+h1{
+  margin:0;
+  height:50%;
+  font-family: 'Alex Brush', cursive;
+  color:white;
+  font-size:8em;
+  text-align:center;
+  position:absolute;
+  top:30%;
+  right:0;
+  left:0;
+}
+
+.arrow{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:2%;
+  width:0;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-top: 40px solid white;
+  opacity:.8;
+  margin:auto;
+}
+
+.arrow-body{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:2%;
+  width:0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid black;
+  opacity:.8;
+  margin:auto;
+}
+
+section{
+  height:100%;
+  position:relative;
+}
+
+.home{
+  height:100%;
+  position:relative;
+  overflow:hidden;
+  background-image:url("../images/twohorses.jpg");
+  background-size:cover;
+  width:100%;
+}
+
+.home p{
+  position:absolute;
+  font-size:2.2em;
+  padding:2% 5% 2% 5%;
+  text-align:center;
+  font-family: 'Niconne', cursive;
+  background-color:white;
+  opacity:.8;
+  top:30%;
+  left:0;
+  right:0;
+  margin:auto;
+  width:65%;
+}
+
+.trainers,.horses{
+  background-color:rgb(230, 234, 239);
+  position:relative;
+}
+
+.trainers h2{
+  font-size:3em;
+  padding:3%;
+  margin:0;
+  text-align:center;
+}
+
+.bio-container{
+  position:absolute;
+  left:0;
+  right:0;
+  margin:auto;
+  width:90%;
+  padding:0;
+}
+
+.bio{
+  width:45%;
+  margin:0 2.5%;
+  height:425px;
+  position:relative;
+  float:left;
+  background-color:white;
+  border:solid 1px gray;
+}
+
+.bio h3{
+  font-size:2em;
+  text-align:center;
+  margin:0;
+  padding:2%;
+  font-weight: normal;
+  background-color:white;
+}
+
+.bio .image{
+  position:absolute;
+  margin:auto;
+  left:0;
+  right:0;
+  background-color:yellow;
+  max-width:100%;
+}
+
+.taryn, .brianna{
+  width:30%;
+}
+
+.bio p{
+  position:absolute;
+  font-size:1em;
+  font-weight:normal;
+  padding:1% 2% 2% 2%;
+  margin:0;
+  bottom:0;
+}
+
+.facility{
+  position:relative;
+}
+
+.facility .type{
+  padding:2% 5% 2% 5%;
+  width:50%;
+  line-height: 1.5em;
+  display:inline-block;
+}
+
+.slideshow-container{
+  max-width: 800px;
+  display:inline-block;
+  position:absolute;
+  left:60%;
+  top:20%;
+}
+
+.mySlides{
+  display:none;
+}
+
+.mySlides img{
+  width:400px;
+  overflow: hidden;
+  border-radius:8px;
+  border:solid 5px rgb(48, 48, 48);
+}
+
+.mySlides:first-child{
+  display:block;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  padding: 4%;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text{
+  color:white;
+  font-size:.9em;
+  padding: 6%;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  text-align:center;
+}
+
+.numbertext{
+  color:white;
+  padding:2%;
+  position: absolute;
+  top:0;
+}
+
+@keyframes fadeAnimation{
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.fade{
+  animation: fadeAnimation 1.5s;
+}
+
+
+
+.horses h2{
+  text-align:center;
+  font-size:2em;
+  padding:2%;
+  margin:0;
+}
+
+.horses p{
+  text-align: center;
+  font-size: 1.1em;
+  width:60%;
+  margin:auto;
+}
+
+.horses h3{
+  background-color:white;
+  width:30%;
+  display:inline-block;
+  margin:1.5%;
+  text-align:center;
+  font-size:1.3em;
+  padding:1%;
+  border-radius:5px;
+}
+
+.horses img{
+  width:15%;
+  display:inline-block;
+  border-radius:5px;
+  margin:0 9%;
+  vertical-align: middle;
+}
+
+.programs ul{
+  margin:0;
+  background-color:rgb(48, 48, 48);
+  padding:1% 0 1% 0;
+}
+
+.programs li{
+  width:30%;
+  display:inline-block;
+  text-align: center;
+  font-size:1.5em;
+  list-style-type: none;
+  margin:0 1% 0 1%;
+  padding:1%;
+  color:white;
+  border-radius:5px;
+}
+
+.programs li:hover{
+  background-color:black;
+}
+
+.black-background{
+  background-color:black;
+}
+
+.lessons,.training,.summer-programs{
+  display:none;
+}
+
+.programs-info{
+  padding:2%;
+  position: relative;
+}
+
+.lessons img{
+  width:30%;
+  border-radius:8px;
+  position: absolute;
+  left:12%;
+}
+
+.lessons img:last-child{
+  left:58%;
+}
+
+.training p{
+  width:50%;
+}
+
+.training img{
+  position:absolute;
+  border-radius:8px;
+  right:10%;
+  top:15%;
+}
+
+.programs{
+  height:100%;
+  position:relative;
+  overflow:hidden;
+  background-image:url("../images/horse-lesson.jpg");
+  background-position: center;
+  background-size:cover;
+  width:100%;
+}
+
+.summer-programs img{
+  position:absolute;
+  border-radius:8px;
+  width:25%;
+  left:15%;
+  top:100%;
+}
+
+.summer-programs img:last-child{
+  left:60%;
+  width:25%;
+}
+
+.contact{
+  background-color:rgb(48, 62, 79);
+  color:white;
+  height:300px;
+  font-size:1.5em;
+  text-align:center;
+  padding:5% 0 0 0;
+}
+
+.contact span{
+  display:block;
+  padding:.25%;
+  color:rgb(244,232,66);
+}
