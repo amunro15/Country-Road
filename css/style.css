@@ -52,6 +52,21 @@ h1{
   margin:auto;
 }
 
+@keyframes bounceAnimation {
+  0%   { transform:translateY(0)}
+  30%  { transform:translateY(-25%)}
+  50%  { transform:translateY(0)}
+  60%  { transform:translateY(-15%)}
+  70%  { transform:translateY(0)}
+  80%  { transform:translateY(-15%)}
+  100% { transform:translateY(0)}
+}
+
+.animate-bounce {
+  opacity:1;
+  animation: bounceAnimation 4s infinite;
+}
+
 .arrow-body{
   position:absolute;
   left:0;
@@ -99,11 +114,21 @@ section{
   position:relative;
 }
 
+.trainers{
+  height:100%;
+  position:relative;
+  overflow:hidden;
+  background-image:url("../images/trainers-background2.png");
+  background-size:cover;
+  width:100%;
+}
+
 .trainers h2{
   font-size:3em;
   padding:3%;
   margin:0;
   text-align:center;
+  color:white;
 }
 
 .bio-container{
@@ -113,16 +138,18 @@ section{
   margin:auto;
   width:90%;
   padding:0;
+  background-color:white;
+  border-radius:10px;
 }
 
 .bio{
-  width:45%;
-  margin:0 2.5%;
-  height:425px;
-  position:relative;
+  width:50%;
   float:left;
-  background-color:white;
-  border:solid 1px gray;
+  height:100%;
+}
+
+.bio:first-child{
+  border-right:solid 1px black;
 }
 
 .bio h3{
@@ -130,30 +157,21 @@ section{
   text-align:center;
   margin:0;
   padding:2%;
-  font-weight: normal;
-  background-color:white;
 }
 
-.bio .image{
-  position:absolute;
-  margin:auto;
-  left:0;
-  right:0;
-  background-color:yellow;
-  max-width:100%;
-}
-
-.taryn, .brianna{
-  width:30%;
+.bio img{
+  margin:5%;
+  background-color:black;
+  float:left;
+  border-radius: 8px;
+  width:40%;
 }
 
 .bio p{
-  position:absolute;
-  font-size:1em;
+  font-size:1.2em;
   font-weight:normal;
-  padding:1% 2% 2% 2%;
+  padding:5%;
   margin:0;
-  bottom:0;
 }
 
 .facility{
@@ -162,16 +180,17 @@ section{
 
 .facility .type{
   padding:2% 5% 2% 5%;
-  width:50%;
-  line-height: 1.5em;
+  width:55%;
+  line-height: 1.25em;
+  font-size:1.1em;
   display:inline-block;
 }
 
 .slideshow-container{
-  max-width: 800px;
+  max-width: 50%;
   display:inline-block;
   position:absolute;
-  left:60%;
+  left:55%;
   top:20%;
 }
 
@@ -180,10 +199,11 @@ section{
 }
 
 .mySlides img{
-  width:400px;
+  width:500px;
   overflow: hidden;
   border-radius:8px;
   border:solid 5px rgb(48, 48, 48);
+  margin:0;
 }
 
 .mySlides:first-child{
@@ -238,19 +258,27 @@ section{
 }
 
 
+.horses{
+  height:100%;
+  position:relative;
+  background-color:rgb(48, 48, 48);
+  width:100%;
+}
 
 .horses h2{
   text-align:center;
   font-size:2em;
   padding:2%;
   margin:0;
+  color:white;
 }
 
 .horses p{
   text-align: center;
-  font-size: 1.1em;
-  width:60%;
+  font-size: 1.3em;
+  width:70%;
   margin:auto;
+  color:white;
 }
 
 .horses h3{
@@ -259,9 +287,14 @@ section{
   display:inline-block;
   margin:1.5%;
   text-align:center;
-  font-size:1.3em;
+  font-size:1.5em;
   padding:1%;
   border-radius:5px;
+}
+
+.ourHorses{
+  background-color:white;
+  padding:3% 0;
 }
 
 .horses img{
@@ -274,7 +307,7 @@ section{
 
 .programs ul{
   margin:0;
-  background-color:rgb(48, 48, 48);
+  background-color:white;
   padding:1% 0 1% 0;
 }
 
@@ -286,16 +319,17 @@ section{
   list-style-type: none;
   margin:0 1% 0 1%;
   padding:1%;
-  color:white;
   border-radius:5px;
 }
 
 .programs li:hover{
-  background-color:black;
+  background-color:rgb(48, 48, 48);
+  color:white;
 }
 
 .black-background{
-  background-color:black;
+  background-color:rgb(48, 48, 48);
+  color:white;
 }
 
 .lessons,.training,.summer-programs{
@@ -303,8 +337,12 @@ section{
 }
 
 .programs-info{
-  padding:2%;
+  padding:1% 2%;
   position: relative;
+}
+
+.programs p{
+  font-size:1.3em;
 }
 
 .lessons img{
@@ -325,8 +363,9 @@ section{
 .training img{
   position:absolute;
   border-radius:8px;
-  right:10%;
-  top:15%;
+  right:8%;
+  top:8%;
+  max-width:40%;
 }
 
 .programs{
