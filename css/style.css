@@ -80,6 +80,19 @@ h1{
   margin:auto;
 }
 
+.arrow-body-white{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:2%;
+  width:0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid white;
+  opacity:.8;
+  margin:auto;
+}
+
 section{
   height:100%;
   position:relative;
