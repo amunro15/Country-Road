@@ -30,6 +30,7 @@ $(document).ready(function(){
   })
 
 //END OF SLIDESHOW
+//ARROW NAV
 
   $(".arrow").on("click",function(e){
     e.preventDefault();
@@ -72,6 +73,10 @@ $(document).ready(function(){
       scrollTop: $(".contact").offset().top
     });
   });
+
+//END OF ARROW NAV
+
+//LESSONS TRAINING SUMMER PROGRAMS
 
   $("li").on("click",function(){
 
