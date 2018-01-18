@@ -150,8 +150,8 @@ section{
   right:0;
   margin:auto;
   width:90%;
-  padding:0;
-  background-color:white;
+  padding:1%;
+  background:rgba(255,255,255,0.8);
   border-radius:10px;
 }
 
@@ -418,3 +418,10 @@ section{
   padding:.25%;
   color:rgb(244,232,66);
 }
+
+@media only screen and (max-width: 400px) {
+  * {
+       -moz-box-sizing: border-box; /* Firexfox */
+       -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+       box-sizing: border-box; /* IE */
+  }
