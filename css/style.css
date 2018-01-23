@@ -16,6 +16,8 @@ body{
   font-family: 'Muli', sans-serif;
 }
 
+/*PAGE 1*/
+
 header{
   height:100%;
   position:relative;
@@ -31,7 +33,7 @@ h1{
   height:50%;
   font-family: 'Alex Brush', cursive;
   color:white;
-  font-size:8em;
+  font-size:8rem;
   text-align:center;
   position:absolute;
   top:30%;
@@ -39,33 +41,124 @@ h1{
   left:0;
 }
 
+.hamburger-wrapper{
+  width:50px;
+  right:0;
+  margin:20px 30px 0 0;
+  opacity:.5;
+  position:fixed;
+  z-index: 2;
+}
+
+.hamburger-wrapper:hover{
+  cursor: pointer;
+}
+
+.hamburger{
+  background-color:rgb(48, 48, 48);
+  width:100%;
+  height:8px;
+  position:relative;
+  left:0;
+  right:0;
+  margin:auto;
+  margin-top:5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-wrapper:hover{
+  opacity:1;
+}
+
+.hamburger-wrapper.active .hamburger:nth-child(2){
+  opacity: 0;
+}
+
+.hamburger-wrapper.active .hamburger:nth-child(1){
+  -webkit-transform: translateY(13px) rotate(45deg);
+  -ms-transform: translateY(13px) rotate(45deg);
+  -o-transform: translateY(13px) rotate(45deg);
+  transform: translateY(13px) rotate(45deg);
+  background-color:white;
+}
+
+.hamburger-wrapper.active .hamburger:nth-child(3){
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+  -ms-transform: translateY(-13px) rotate(-45deg);
+  -o-transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-13px) rotate(-45deg);
+  background-color:white;
+}
+
+.menu{
+  height:100%;
+  width:25%;
+  background-color:rgb(48, 48, 48);
+  z-index: 1;
+  position:fixed;
+  right:0;
+  font-size:1.2rem;
+  line-height: 300%;
+  padding:0;
+  display: none;
+}
+
+.menu ul{
+  list-style-type: none;
+  color:white;
+  padding:0;
+  margin:30% 0 0 10%;
+}
+
+.menu li{
+  padding:0 0 0 2%;
+}
+
+li:hover{
+  cursor: pointer;
+}
+
+.divider{
+  height:1px;
+  background-color:white;
+  width:95%;
+}
+
 .arrow{
   position:absolute;
   left:0;
   right:0;
-  bottom:2%;
+  bottom:5%;
   width:0;
-	border-left: 40px solid transparent;
-	border-right: 40px solid transparent;
-	border-top: 40px solid white;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 50px solid white;
   opacity:.8;
   margin:auto;
 }
 
+.arrow:hover{
+  opacity:1;
+}
+
 @keyframes bounceAnimation {
   0%   { transform:translateY(0)}
-  30%  { transform:translateY(-25%)}
+  30%  { transform:translateY(-40%)}
   50%  { transform:translateY(0)}
-  60%  { transform:translateY(-15%)}
+  60%  { transform:translateY(-20%)}
   70%  { transform:translateY(0)}
-  80%  { transform:translateY(-15%)}
+  80%  { transform:translateY(-20%)}
   100% { transform:translateY(0)}
 }
 
 .animate-bounce {
-  opacity:1;
+  opacity:.8;
   animation: bounceAnimation 4s infinite;
 }
+
+/*PAGE 2*/
 
 .arrow-body{
   position:absolute;
@@ -109,7 +202,7 @@ section{
 
 .home p{
   position:absolute;
-  font-size:2.2em;
+  font-size:2.2rem;
   padding:2% 5% 2% 5%;
   text-align:center;
   font-family: 'Niconne', cursive;
@@ -121,6 +214,8 @@ section{
   margin:auto;
   width:65%;
 }
+
+/*PAGE 3*/
 
 .trainers,.horses{
   background-color:rgb(230, 234, 239);
@@ -137,7 +232,7 @@ section{
 }
 
 .trainers h2{
-  font-size:3em;
+  font-size:3rem;
   padding:3%;
   margin:0;
   text-align:center;
@@ -166,7 +261,7 @@ section{
 }
 
 .bio h3{
-  font-size:2em;
+  font-size:2rem;
   text-align:center;
   margin:0;
   padding:2%;
@@ -181,21 +276,28 @@ section{
 }
 
 .bio p{
-  font-size:1.2em;
+  font-size:.9rem;
   font-weight:normal;
   padding:5%;
   margin:0;
 }
 
+/*PAGE 4*/
+
 .facility{
   position:relative;
+}
+
+.facility h2{
+  text-align: center;
+  font-size:2rem;
 }
 
 .facility .type{
   padding:2% 5% 2% 5%;
   width:55%;
-  line-height: 1.25em;
-  font-size:1.1em;
+  line-height: 1.25rem;
+  font-size:1.1rem;
   display:inline-block;
 }
 
@@ -230,7 +332,7 @@ section{
   padding: 4%;
   color: white;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
 }
@@ -246,7 +348,7 @@ section{
 
 .text{
   color:white;
-  font-size:.9em;
+  font-size:.9rem;
   padding: 6%;
   position:absolute;
   bottom:0;
@@ -270,6 +372,7 @@ section{
   animation: fadeAnimation 1.5s;
 }
 
+/*PAGE 6*/
 
 .horses{
   height:100%;
@@ -280,7 +383,7 @@ section{
 
 .horses h2{
   text-align:center;
-  font-size:2em;
+  font-size:2rem;
   padding:2%;
   margin:0;
   color:white;
@@ -288,8 +391,8 @@ section{
 
 .horses p{
   text-align: center;
-  font-size: 1.3em;
-  width:70%;
+  font-size: 1.2rem;
+  width:80%;
   margin:auto;
   color:white;
 }
@@ -298,11 +401,15 @@ section{
   background-color:white;
   width:30%;
   display:inline-block;
-  margin:1.5%;
+  margin:1%;
   text-align:center;
-  font-size:1.5em;
+  font-size:1.5rem;
   padding:1%;
   border-radius:5px;
+}
+
+.horses h3.mobileOnly {
+  display: none;
 }
 
 .ourHorses{
@@ -318,6 +425,12 @@ section{
   vertical-align: middle;
 }
 
+.mobileOnly{
+  display:none;
+}
+
+/*PAGE 7*/
+
 .programs ul{
   margin:0;
   background-color:white;
@@ -328,7 +441,7 @@ section{
   width:30%;
   display:inline-block;
   text-align: center;
-  font-size:1.5em;
+  font-size:1.5rem;
   list-style-type: none;
   margin:0 1% 0 1%;
   padding:1%;
@@ -355,7 +468,7 @@ section{
 }
 
 .programs p{
-  font-size:1.3em;
+  font-size:1.3rem;
 }
 
 .lessons img{
@@ -404,11 +517,13 @@ section{
   width:25%;
 }
 
+/*PAGE 8*/
+
 .contact{
   background-color:rgb(48, 62, 79);
   color:white;
   height:300px;
-  font-size:1.5em;
+  font-size:1.5rem;
   text-align:center;
   padding:5% 0 0 0;
 }
@@ -419,9 +534,186 @@ section{
   color:rgb(244,232,66);
 }
 
-@media only screen and (max-width: 400px) {
+/*MOBILE*/
+
+@media only screen and (max-width: 480px) {
   * {
        -moz-box-sizing: border-box; /* Firexfox */
        -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
        box-sizing: border-box; /* IE */
   }
+
+  html, body, .wrapper{
+    height:100%;
+  }
+
+  body, html{
+    font-size:10px;
+  }
+
+  .menu{
+    width:100%;
+  }
+
+  .menu ul{
+    margin-top: 80px;
+    font-size: 2rem;
+    line-height: 6rem;
+    margin: 12% 10%;
+  }
+
+  .home{
+    background-position:600px;
+  }
+
+  .home p{
+    top:15%;
+    font-size:2.6rem;
+    width:90%;
+    border-radius:10px;
+    padding: 5%;
+  }
+
+  .trainers h2{
+    margin:5% 0 5% 0;
+    padding:0;
+  }
+
+  .bio h3{
+    padding:1%;
+  }
+
+  .bio p{
+    padding:2%;
+    display:inline-block;
+    width:60%;
+  }
+
+  .bio img{
+    width:30%;
+    display:inline-block;
+  }
+
+  .bio{
+    width:100%;
+  }
+
+  .bio:first-child{
+    border-right:solid 0px black;
+  }
+
+  .facility .type{
+    width:100%;
+  }
+
+  .programs li{
+    width:98%;
+    border:solid .5px black;
+    margin-top:2%;
+  }
+
+  .lessons img{
+    margin:10% 0 0 0;
+    width: 40%;
+    left:auto;
+    position: relative;
+  }
+
+  .lessons img:last-child{
+    left: 20%;
+  }
+
+  .training p{
+    width:100%;
+  }
+
+  .training img{
+    top:98%;
+    left:0;
+    right:0;
+    margin:auto;
+  }
+
+  .summer-programs img{
+    width:40%;
+    left:5%;
+  }
+
+  .summer-programs img:last-child{
+    width:40%;
+    left:55%;
+  }
+
+  .slideshow-container{
+    max-width:70%;
+    display:inline-block;
+    position:absolute;
+    left:15%;
+    top:60%;
+  }
+
+  .mySlides img{
+    width:250px;
+    overflow: hidden;
+    border-radius:8px;
+    border:solid 5px rgb(48, 48, 48);
+    margin:0;
+  }
+
+  .horses {
+    height: 256%;
+  }
+
+  .horses h3{
+    width:98%;
+    display: none;
+  }
+
+  .horses p{
+    padding:5% 0 5% 0;
+    width:90%;
+  }
+
+  .horses img {
+    width: 82%;
+  }
+
+  .programs {
+    background-image: none;
+    height: 310%;
+  }
+
+  .programs-info {
+    padding: 5% 8%;
+  }
+
+  .programs ul {
+    display: none;
+  }
+
+  .programs li{}
+
+  .ourHorses h3.mobileOnly, .lessons h3.mobileOnly,
+  .training h3.mobileOnly, .summer-programs h3.mobileOnly{
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+  }
+
+  .training img, .lessons img, .summer-programs img{
+    position: relative;
+    width: 100%;
+    max-width: inherit;
+    left: auto;
+    right: auto;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .lessons,.training,.summer-programs{
+    display:block;
+  }
+
+}

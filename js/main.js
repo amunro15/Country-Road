@@ -6,6 +6,23 @@ $(document).ready(function(){
 
   var current = 0;
 
+  var isMobile = false;
+
+  if ($(window).width() < 480) {
+   isMobile = true;
+  }
+
+  $(window).resize(function(){
+
+
+    if ($(window).width() < 480) {
+     isMobile = true;
+   } else {
+     isMobile = false;
+   }
+
+  });
+
   function updateImage(){
     $(".mySlides img").attr("src",myArray[current]);
     $(".text").html(textArray[current]);
@@ -13,7 +30,6 @@ $(document).ready(function(){
   };
 
   $(".next").on("click",function(){
-    console.log("hi");
     current++;
     if(current==4){
       current = 0;
@@ -75,10 +91,39 @@ $(document).ready(function(){
   });
 
 //END OF ARROW NAV
+//HAMBURGER NAV
 
+  $(".hamburger-wrapper").on("click",function(){
+    $(this).toggleClass("active");
+    $(".menu").toggle();
+  });
+
+  $(".menu li").on("click",function(e){
+    e.preventDefault();
+
+    var where = $(this).data("class");
+
+    if(where == 'lessons' || where =='summer-programs' || where == 'training') {
+      where = 'programs';
+    }
+
+    if (isMobile) {
+      $(".hamburger-wrapper").toggleClass("active");
+      $('.menu').hide();
+      if(where == 'lessons' || where =='summer-programs' || where == 'training') {
+        where += 'Mobile';
+      }
+    }
+
+    $("html,body").animate({
+      scrollTop: $("."+where).offset().top
+    });
+  });
+
+//END OF HAMBURGER
 //LESSONS TRAINING SUMMER PROGRAMS
 
-  $("li").on("click",function(){
+  $(".programs li").on("click",function(){
 
     var currentlyOpen;
     var extractClass = $(this).attr('class');//get the attribute called class
